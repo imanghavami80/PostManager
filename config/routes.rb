@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+
+  # get 'posts/index'
+  # get 'posts/show'
+  # get 'posts/new'
+  # get 'posts/edit'
+  # get 'posts/delete'
+
+  resources :posts do
+    member do
+      get :delete
+    end
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
