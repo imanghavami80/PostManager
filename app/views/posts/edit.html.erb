@@ -1,2 +1,15 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<%= link_to('Back to List', posts_path, class: 'back-link') %>
+
+<div class="posts edit">
+  <h2>Edit Post</h2>
+
+  <%= form_for(@post) do |f| %>
+
+    <%= render(partial: "form", locals: {f: f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Edit Post", class: 'action edit') %>
+    </div>
+
+  <% end %>
+</div>

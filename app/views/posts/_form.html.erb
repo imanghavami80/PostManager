@@ -1,0 +1,14 @@
+<table class="form-table" summary="Post form fields">
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= f.text_area(:body) %></td>
+  </tr>
+  <tr>
+    <th>Liked</th>
+    <td><%= f.check_box(:liked) %></td>
+  </tr>
+</table>

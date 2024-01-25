@@ -1,2 +1,33 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<%= link_to('Back to List', posts_path, class: 'back-link') %>
+
+<div class="posts show">
+  <h2>Show post</h2>
+
+  <div class="actions">
+    <%= link_to('Edit', edit_post_path(@post), class: 'action edit') %>
+    <%= link_to('Delete', delete_post_path(@post), class: 'action delete') %>
+  </div>
+
+  <table class="detail-view" summary="Post detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @post.body %></td>
+    </tr>
+    <tr>
+      <th>Liked</th>
+      <td><%= @post.liked? ? 'Yes' : 'No' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @post.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @post.updated_at %></td>
+    </tr>
+  </table>
+</div>

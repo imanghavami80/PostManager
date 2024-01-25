@@ -1,15 +1,111 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.posts {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    text-align: center;
+}
+
+.action {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #0056b3;
+}
+
+.listing, .detail-view, .form-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.header {
+    background-color: #f8f9fa;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.detail-view td {
+    width: 50%;
+}
+
+.actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.action.show {
+    background-color: #ffc107;
+}
+
+.action.show:hover {
+    background-color: #e0a800;
+}
+
+.action.edit {
+    background-color: #17a2b8;
+}
+
+.action.edit:hover {
+    background-color: #126b7e;
+}
+
+.action.delete {
+    background-color: #dc3545;
+}
+
+.action.delete:hover {
+    background-color: #a52b34;
+}
+
+.action:hover {
+    background-color: #0056b3;
+}
+
+.form-table th, .form-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.form-table td {
+    width: 50%;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.action.create {
+    background-color: #28a745;
+}
+
+.action.create:hover {
+    background-color: #218838;
+}

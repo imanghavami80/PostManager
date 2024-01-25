@@ -1,2 +1,17 @@
-<h1>Posts#delete</h1>
-<p>Find me in app/views/posts/delete.html.erb</p>
+<%= link_to('Back to List', posts_path, class: 'back-link') %>
+
+<div class="posts delete">
+  <h2>Delete Post</h2>
+
+  <%= form_for(@post, method: 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this post?</p>
+    <p><%= @post.title %></p>
+    <p><%= @post.body %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Post", class: 'action delete') %>
+    </div>
+
+  <% end %>
+</div>
