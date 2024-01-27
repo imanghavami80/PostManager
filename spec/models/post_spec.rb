@@ -1,18 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  it "is valid with valid attributes" do
-    post = Post.new(title: "Test Post", body: "This is a test post.", liked: false)
-    expect(post).to be_valid
-  end
+  context 'validations' do
 
-  it "is not valid without a title" do
-    post = Post.new(body: "This is a test post.")
-    expect(post).not_to be_valid
-  end
+    it 'requires title' do
+      post = Post.new(body: 'Some content', liked: false)
+      expect(post).to_not be_valid
+      expect(post.errors[:title]).to include("can't be blank")
+    end
 
-  it "is not valid without body" do
-    post = Post.new(title: "Test Post")
-    expect(post).not_to be_valid
+    it 'requires body' do
+      post = Post.new(title: 'Some title', liked: false)
+      expect(post).to_not be_valid
+      expect(post.errors[:body]).to include("can't be blank")
+    end
+
+    it 'is valid with title, body and author all together' do
+      post = Post.new(title: 'Some title', body: 'Some content', liked: true)
+      expect(post).to be_valid
+    end
+
   end
 end
